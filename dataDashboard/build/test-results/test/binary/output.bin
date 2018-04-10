@@ -1,0 +1,3 @@
+Ú21:31:41.165 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\kamil\workspace\dataDashboard\build\resources\test\data]
+—21:31:41.177 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\kamil\workspace\dataDashboard\build\resources\test\data] for files matching pattern [C:/kamil/workspace/dataDashboard/build/resources/test/data/*]
+÷21:31:41.185 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath:data/*] to resources [file [C:\kamil\workspace\dataDashboard\build\resources\test\data\testData.csv]]

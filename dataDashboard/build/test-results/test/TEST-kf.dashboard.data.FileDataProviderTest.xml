@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kf.dashboard.data.FileDataProviderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-04-10T19:31:40" hostname="kamil_" time="0.48">
+  <properties/>
+  <testcase name="shouldReadDataFromFile" classname="kf.dashboard.data.FileDataProviderTest" time="0.138"/>
+  <testcase name="shouldListFilesInDataDirectory" classname="kf.dashboard.data.FileDataProviderTest" time="0.341"/>
+  <system-out><![CDATA[21:31:41.165 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\kamil\workspace\dataDashboard\build\resources\test\data]
+21:31:41.177 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\kamil\workspace\dataDashboard\build\resources\test\data] for files matching pattern [C:/kamil/workspace/dataDashboard/build/resources/test/data/*]
+21:31:41.185 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath:data/*] to resources [file [C:\kamil\workspace\dataDashboard\build\resources\test\data\testData.csv]]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <div th:insert="navbar :: navbar"></div>
+
+    <div class="container">
+        <h1>Data dashboard</h1>
+
+        <p>
+            Welcome to the data dashboard application. <br><br>
+            The goal of this application is to visualize yield and other metrics based on generated csv files.
+            You can choose a file from the list below. After selecting the file beside the yield you can also see graphs for temperature, component and
+            product flow which you can switch between using links on top menu.<br>
+            The "Source data" option shows table with source data used for visualization.<br><br>
+            Note, that if you will not choose any file and use any of the top buttons data for default file will be shown (this is the file attached to the task description).<br><br>
+        </p>
+
+        <table class="table table-condensed">
+            <tr>
+                <th class="nrColumn">#</th>
+                <th>File name</th>
+            <tr>
+            <tr th:each="fileName, iterStat : ${availableFiles}">
+                <td th:text="${iterStat.index}"></td>
+                <td>
+                    <a href="#" th:href="@{/yieldGraph(fileName=${fileName})}" th:text="${fileName}"></a>
+                </td>
+            </tr>
+        <table>
+    </div>
+</div>
+</body>
+</html>

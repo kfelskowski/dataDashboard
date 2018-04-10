@@ -20,7 +20,6 @@ out/
 ## jvm fatal error logs
 hs_err_*
 ## gradle
-build
 .gradle/
 classes/
 atlassian-ide-plugin.xml
