@@ -1,0 +1,30 @@
+log/
+out/
+*/bin
+*/classes
+*/dist
+*/*test*/reports
+*/*test*/report_html
+*/junit*.properties
+*.class
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.orig
+.idea
+*.iml
+*.eml
+## jvm fatal error logs
+hs_err_*
+## gradle
+build
+.gradle/
+classes/
+atlassian-ide-plugin.xml
+*/.checkstyle
+*/.settings
+*/lib/*-sources.jar
+/.project

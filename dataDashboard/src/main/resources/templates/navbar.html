@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="navbar">
+        <div class="navbar navbar-inverse navbar-fixed-top" th:fragment="header">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" th:href="@{/dashboard}">Data Dashboard</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li th:classappend="${module == 'yieldGraph' ? 'active' : ''}">
+                            <a href="#" th:href="@{/yieldGraph(fileName=${fileName})}">Yield graph</a>
+                        </li>
+                        <li th:classappend="${module == 'componentFlowGraph' ? 'active' : ''}">
+                            <a href="#" th:href="@{/componentFlowGraph(fileName=${fileName})}">Component flow graph</a>
+                        </li>
+                        <li th:classappend="${module == 'temperatureGraph' ? 'active' : ''}">
+                            <a href="#" th:href="@{/temperatureGraph(fileName=${fileName})}">Temperature graph</a>
+                        </li>
+                        <li th:classappend="${module == 'productFlowGraph' ? 'active' : ''}">
+                            <a href="#" th:href="@{/productFlowGraph(fileName=${fileName})}">Product flow graph</a>
+                        </li>
+                        <li th:classappend="${module == 'table' ? 'active' : ''}">
+                            <a href="#" th:href="@{/table(fileName=${fileName})}">Source data</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+</body>
+</html>

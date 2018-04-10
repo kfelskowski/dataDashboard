@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <div th:insert="navbar :: navbar"></div>
+
+    <!-- Default panel contents -->
+    <div class="panel panel-default withMargin">
+        <div class="panel-heading" th:text="'Reading data for file: ' + ${fileName} + '!'">
+        </div>
+
+        <!-- Table -->
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Component A flow (kgH)</th>
+                <th>Component B flow (kgH)</th>
+                <th>Coolant temperature (C)</th>
+                <th>Reactor outlet temperature (C)</th>
+                <th>Reactor hotspot temperature (C)</th>
+                <th>Yield (%)</th>
+                <th>Product flow (tons/day)</th>
+            </tr>
+            <tr th:each="dataRow, iterStat : ${dataRows}" th:class="${iterStat.odd}? 'odd'">
+                <td th:text="${iterStat.index}"></td>
+                <td th:text="${dataRow.date}"></td>
+                <td th:text="${dataRow.componentAFlowKgH}"></td>
+                <td th:text="${dataRow.componentBFlowKgH}"></td>
+                <td th:text="${dataRow.coolantTemperatureC}"></td>
+                <td th:text="${dataRow.reactorOutletTemperatureC}"></td>
+                <td th:text="${dataRow.reactorHotspotTemperatureC}"></td>
+                <td th:text="${dataRow.yieldPercent}"></td>
+                <td th:text="${dataRow.productFlowTonsPerDay}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
